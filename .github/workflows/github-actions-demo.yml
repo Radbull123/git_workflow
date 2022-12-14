@@ -58,7 +58,7 @@ jobs:
       - name: Install project
         run: poetry install --no-interaction
       - name: Run unit tests
-        run: PYTHONPATH=src/ poetry run python -m pytest -v
+        run: poetry run pytest -v
 
   static-analysis:
 
@@ -97,4 +97,4 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Run flake8
-        run: PYTHONPATH=src/ poetry run python -m flake8
+        run: poetry run flake8
