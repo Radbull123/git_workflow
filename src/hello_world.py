@@ -2,7 +2,8 @@ import os
 
 
 def hello_user() -> str:
-    os_variable_name = os.environ.get("TEST_NAME", "User")
+    # Second item is the default string if first value is not found in environment
+    os_variable_name = os.environ.get("TEST_NAME", "Unknown User")
     return f"Hello {os_variable_name}"
 
 
